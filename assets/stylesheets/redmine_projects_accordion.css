@@ -1,0 +1,58 @@
+ul.acc {
+  border: 2px solid #ccc;
+  margin: 0;
+  padding: 0;
+}
+  
+ul.acc li.section {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 10px 0;  
+}
+
+ul.acc li .title, ul.acc li .head {
+  border-top: 2px solid #ccc;
+  color: #000;
+  display: block;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  text-decoration: none;
+  margin: 0;
+}
+
+ul.acc li .title {
+  float: left;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+ul.acc li:first-child .head, ul.acc li:first-child .title {
+  border-top: 0;
+}
+
+ul.acc li a.title:hover {
+  background: #ccc;
+}
+
+ul.acc li div.toggle {
+  border-top: 2px solid #ccc;
+  padding: 0 10px;
+  clear: both;
+}
+
+ul.acc li.section.expanded>.head, ul.acc li.section.expanded>.title {
+  background: #ddd;  
+}
+
+ul.acc li.section .title {
+  background-image: url(../images/collapsed.png);
+}
+
+ul.acc li.section.expanded>.title {
+  background-image: url(../images/expanded.png);
+}
