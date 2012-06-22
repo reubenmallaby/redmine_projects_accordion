@@ -5,6 +5,11 @@ Projects accordion view for Redmine
 
 Requires Redmine 2.x and Rails 3.2.x
 
+ACCORDION
+=========
+
+The javascript for the accordion comes from https://github.com/deleteme/prototype-accordion
+
 
 LICENSE
 =======

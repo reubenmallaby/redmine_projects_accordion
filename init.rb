@@ -3,6 +3,8 @@ Redmine::Plugin.register :redmine_projects_accordion do
   author 'Reuben Mallaby'
   description 'This is a Redmine plugin which will turn the projects page into an accordion view using Accordion js'
   version '0.0.1'
+  url 'http://isic.he-arc.ch'
+  author_url 'http://isic.he-arc.ch/isic-galerie-institut-equipe/reuben-mallaby'
 end
 
 class RedmineProjectsAccordionListener < Redmine::Hook::ViewListener
