@@ -21,7 +21,7 @@ ul.acc li .title, ul.acc li .head {
   margin: 0;
 }
 
-ul.acc li .title {
+ul.acc li .title, ul.acc li .notitle {
   float: left;
   width: 30px;
   height: 30px;
@@ -36,6 +36,7 @@ ul.acc li a.title:hover {
 
 ul.acc li div.toggle {
   padding: 10px;
+  margin-left: 20px;
   clear: both;
 }
 

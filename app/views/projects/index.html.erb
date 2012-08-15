@@ -15,7 +15,8 @@
 
 <% @projects.delete_if { |p| !p.active? } -%>
 
-<% ids = @projects.map { |p| p.id unless p.children.empty? } %>
+<% ids = @projects.map { |p| p.id } %> 
+<%- #unless p.children.empty? } %>
 <% ids.delete_if { |p| p.nil? } %>
 
 <% @projects.delete_if { |p| !p.parent_id.nil? } -%>
