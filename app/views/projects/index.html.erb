@@ -21,11 +21,11 @@
 
 <% @projects.delete_if { |p| !p.parent_id.nil? } -%>
 
-<ul id="acc0" class="acc">
+<div class="accordion">
   <% for project in @projects %>
     <%= render :partial => "list", :locals => { :project => project } %>
   <%- end %>
-</ul>
+</div>
 
 <% if User.current.logged? %>
 <p style="text-align:right;">
@@ -39,8 +39,5 @@
 
 <% html_title(l(:label_project_plural)) -%>
 
-<script language="javascript">
-  var accordionIDs = new Array(<%= ids.join(',') %>);
-  loadAccordions(accordionIDs);
-</script>
-
+<script>$('.accordion').accordion({ autoHeight: false });</script>
+	

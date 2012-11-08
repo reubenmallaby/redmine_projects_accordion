@@ -1,14 +1,12 @@
-<li class="section">
-  <div class="title">&nbsp;</div>
-  <h3 class="head"><%= link_to(h(project.name), {:controller => 'projects', :action => 'show', :id => project}, :class => "project") %></h3>
-  <div class="toggle">
-    <%= textilizable project.short_description.gsub(/\!.+\!/,""), :project => project %>  
-    <% if(!project.children.empty?) %>
-      <ul class="acc" id="acc<%= project.id %>">
-        <% project.children.each do |child| %>
-          <%= render :partial => "list", :locals => { :project => child } if child.active? %>
-        <%- end %>
-      </ul>
-    <%- end %>
-  </div>
-</li>
+<h3><%= link_to(h(project.name), {:controller => 'projects', :action => 'show', :id => project}, :class => "project") %></h3>
+<div>
+  <%= textilizable project.short_description.gsub(/\!.+\!/,""), :project => project %>  
+  <% if(!project.children.empty?) %>
+    <div class="accordion">
+      <% project.children.each do |child| %>
+        <%= render :partial => "list", :locals => { :project => child } if child.active? %>
+      <%- end %>
+    </div>
+  <%- end %>
+</div>
+

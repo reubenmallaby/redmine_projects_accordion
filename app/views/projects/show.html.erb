@@ -22,7 +22,7 @@
 
     <% #@subprojects.delete_if { |p| !p.parent_id.nil? } -%>
 
-    <ul id="acc0" class="acc">
+    <ul class="accordion">
       <% for project in @subprojects %>
         <%= render :partial => "list", :locals => { :project => project } %>
       <%- end %>
@@ -91,8 +91,4 @@
 
 <% html_title(l(:label_overview)) -%>
 
-<script language="javascript">
-  var accordionIDs = new Array(<%= ids.join(',') %>);
-  loadAccordions(accordionIDs);
-</script>
-
+<script>$('.accordion').accordion({ autoHeight: false });</script>
