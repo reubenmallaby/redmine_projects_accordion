@@ -3,13 +3,12 @@ redmine_projects_accordion
 
 Projects accordion view for Redmine
 
-Requires Redmine 2.x and Rails 3.2.x
+Requires Redmine 2.1+
 
 ACCORDION
 =========
 
-The javascript for the accordion comes from https://github.com/deleteme/prototype-accordion
-
+This plugin uses the jQuery UI accordion code as included by Redmine 2.1+
 
 LICENSE
 =======
