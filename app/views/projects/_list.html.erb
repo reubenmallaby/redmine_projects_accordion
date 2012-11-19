@@ -1,5 +1,7 @@
 <h3>
-  <%= link_to(h(project.name), {:controller => 'projects', :action => 'show', :id => project}, :class => "project") %>
+  <div class="project">
+    <%= link_to(h(project.name), {:controller => 'projects', :action => 'show', :id => project}, :class => "project#{User.current.member_of?(project) ? ' my-project' : nil}") %>
+  </div>
 </h3>
 <div>
   <%= textilizable project.short_description.gsub(/\!.+\!/,""), :project => project %>  

@@ -91,5 +91,16 @@
 
 <% html_title(l(:label_overview)) -%>
 
-<script>$('.accordion').accordion({ autoHeight: false, collapsible: true, navigation:true, event: 'mouseover', active: false, animate: 'slow' });</script>
-
+<script>
+$('.accordion').accordion( {
+  autoHeight: false, 
+  collapsible: true, 
+  navigation:true, 
+  active: -1, 
+  animate: 'slow' 
+});
+$(".accordion h3 a.project").click(function() {
+  window.location = $(this).attr('href');
+  return false;
+});
+</script>

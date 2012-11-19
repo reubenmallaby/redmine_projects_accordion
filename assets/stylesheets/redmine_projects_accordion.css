@@ -51,3 +51,5 @@ ul.acc li.section .title {
 ul.acc li.section.expanded>.title {
   background-image: url(../images/expanded.png);
 }
+
+.accordion a.project { display: inline-block;}
