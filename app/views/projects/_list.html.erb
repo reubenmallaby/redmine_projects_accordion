@@ -8,7 +8,7 @@
   <% if(!project.children.empty?) %>
     <div class="accordion">
       <% project.children.each do |child| %>
-        <%= render :partial => "list", :locals => { :project => child } if child.active? %>
+        <%= render :partial => "list", :locals => { :project => child } if child.visible? %>
       <%- end %>
     </div>
   <%- end %>
